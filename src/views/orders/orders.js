@@ -1,0 +1,21 @@
+import React from 'react';
+import {Title} from '../common';
+import SearchOrder from './order-search/order-search';
+import OrderDetails from './order-details/order-details';
+
+class Orders extends React.Component {
+    render() {
+        return (
+            <div className='orders'>
+                <Title text='Orders Site' />
+
+                <div className='search-order-section'>
+                    <SearchOrder />
+                    <OrderDetails />
+                </div>
+            </div>
+        );
+    }
+}
+
+export default Orders;
