@@ -39,7 +39,7 @@ class Table extends React.Component {
         }
 
         return (
-            <div className="row table-responsive" id={this.props.id}>
+            <div className="row table-responsive offset-table" id={this.props.id}>
                 <table className="table table-striped table-sm">
                     <thead>
                         {headers && <ComputeHeader headers = {headers}/>}

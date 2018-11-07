@@ -7,7 +7,23 @@ import {Title} from '../common';
 import ApiEdtCallReport from './api-edt-call-report/api-edt-call-report';
 import ApiCallReport from './api-call-report/api-call-report';
 
+import { connect } from 'react-redux';
+import {actionSelectMenu} from '../../actions/index';
+
+const mapStateToProps = state => {
+    return {
+    };
+};
+
+const mapDispatchToProps = {
+    actionSelectMenu
+};
+
 class Merchant extends React.Component {
+    componentDidMount() {
+        this.props.actionSelectMenu(2);
+    }
+
     render() {
         return (
             <div className='merchant'>
@@ -27,4 +43,5 @@ class Merchant extends React.Component {
     }
 }
 
-export default Merchant;
+// export default Merchant;
+export default connect(mapStateToProps, mapDispatchToProps)(Merchant);

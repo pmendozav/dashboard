@@ -1,0 +1,7 @@
+.disabled {
+    background: #ccc;
+    outline: none;
+    border: 0;
+    border: 1px solid #777;
+    pointer-events: none;
+}

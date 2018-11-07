@@ -10,7 +10,7 @@ const initialState = {
 
     merchantDetailsIsLoading: false,
     merchantDetailsHasError: false,
-    merchantDetailsDataSuccess: [],
+    merchantDetailsDataSuccess: null,
 
     merchantApiEdtCallIsLoading: false,
     merchantApiEdtCallHasError: false,

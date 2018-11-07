@@ -34,6 +34,7 @@ export const db_merchants_details =
     "type": "checkout",
     "active": "true",
     "mb": "12345",
+    "merchantDirect": "N",
 };
 
 

@@ -5,7 +5,9 @@ import { connect } from 'react-redux';
 import Search2 from '../../../components/search-v2/search-v2';
 
 import { apiEdtCallFetchData } from '../../../actions/api-edt-call';
+import {actionSelectMenu} from '../../../actions/index';
 import EdtCallResult from './edt-call-result';
+
 
 const mapStateToProps = state => {
     return {
@@ -14,6 +16,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = {
     apiEdtCallFetchData,
+    actionSelectMenu
 };
 
 class EdtCallSearch extends React.Component {
@@ -54,6 +57,10 @@ class EdtCallSearch extends React.Component {
 
         this.onclick = this.onclick.bind(this);
         this.handleChange = this.handleChange.bind(this);
+    }
+
+    componentDidMount() {
+        this.props.actionSelectMenu(5);
     }
 
     handleChange(index, target) {
